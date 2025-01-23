@@ -1,0 +1,56 @@
+[
+  {
+      "Id": 1,
+      "Name": "To Kill a Mockingbird",
+      "SellBorrow": 1,
+      "Price": 10.99
+  },
+  {
+      "Id": 2,
+      "Name": "1984",
+      "SellBorrow": 2,
+      "Price": 8.99
+  },
+  {
+      "Id": 3,
+      "Name": "The Great Gatsby",
+      "SellBorrow": 2,
+      "Price": 12.50
+  },
+  {
+      "Id": 4,
+      "Name": "Moby Dick",
+      "SellBorrow": 1,
+      "Price": 15.75
+  },
+  {
+      "Id": 5,
+      "Name": "Pride and Prejudice",
+      "SellBorrow": 1,
+      "Price": 9.99
+  },
+  {
+      "Id": 6,
+      "Name": "The Catcher in the Rye",
+      "SellBorrow": 1,
+      "Price": 11.49
+  },
+  {
+      "Id": 7,
+      "Name": "The Hobbit",
+      "SellBorrow": 1,
+      "Price": 14.25
+  },
+  {
+      "Id": 8,
+      "Name": "War and Peace",
+      "SellBorrow": 1,
+      "Price": 18.00
+  },
+  {
+      "Id": 9,
+      "Name": "Crime and Punishment",
+      "SellBorrow": 1,
+      "Price": 13.99
+  }
+]

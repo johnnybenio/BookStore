@@ -1,0 +1,49 @@
+
+.card:hover img{
+    transform: scale(1.2,1.2);
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    height: 400px;
+    opacity: 0.5;
+}
+
+.card-body h1 {
+    font-size: 18px; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide any overflowing text */
+    text-overflow: ellipsis; /* Add "..." to indicate truncated text */
+    width: 100%; /* Ensure the title takes up the full width of the container */
+}
+
+.card img {
+    width: 300px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    object-fit: fill; /* Forces images to fit exactly into the specified dimensions */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.card-img-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+
+.member-icons{
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+}
+
+.card-img-wrapper:hover .member-icons{
+    bottom: 0;
+    opacity: 1;
+}
+
+.animate{
+    transition: all 0.3s ease-in-out;
+}
