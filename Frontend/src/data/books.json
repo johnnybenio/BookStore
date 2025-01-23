@@ -1,56 +1,66 @@
 [
-  {
+    {
       "Id": 1,
       "Name": "To Kill a Mockingbird",
       "SellBorrow": 1,
-      "Price": 10.99
-  },
-  {
+      "Price": 10.99,
+      "Type": "Fiction"
+    },
+    {
       "Id": 2,
       "Name": "1984",
       "SellBorrow": 2,
-      "Price": 8.99
-  },
-  {
+      "Price": 8.99,
+      "Type": "Dystopian"
+    },
+    {
       "Id": 3,
       "Name": "The Great Gatsby",
       "SellBorrow": 2,
-      "Price": 12.50
-  },
-  {
+      "Price": 12.50,
+      "Type": "Classic"
+    },
+    {
       "Id": 4,
       "Name": "Moby Dick",
       "SellBorrow": 1,
-      "Price": 15.75
-  },
-  {
+      "Price": 15.75,
+      "Type": "Classic"
+    },
+    {
       "Id": 5,
       "Name": "Pride and Prejudice",
       "SellBorrow": 1,
-      "Price": 9.99
-  },
-  {
+      "Price": 9.99,
+      "Type": "Romance"
+    },
+    {
       "Id": 6,
       "Name": "The Catcher in the Rye",
       "SellBorrow": 1,
-      "Price": 11.49
-  },
-  {
+      "Price": 11.49,
+      "Type": "Fiction"
+    },
+    {
       "Id": 7,
       "Name": "The Hobbit",
       "SellBorrow": 1,
-      "Price": 14.25
-  },
-  {
+      "Price": 14.25,
+      "Type": "Fantasy"
+    },
+    {
       "Id": 8,
       "Name": "War and Peace",
       "SellBorrow": 1,
-      "Price": 18.00
-  },
-  {
+      "Price": 18.00,
+      "Type": "Historical"
+    },
+    {
       "Id": 9,
       "Name": "Crime and Punishment",
       "SellBorrow": 1,
-      "Price": 13.99
-  }
-]
+      "Price": 13.99,
+      "Type": "Psychological Thriller"
+    }
+  ]
+  
