@@ -2,11 +2,12 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';  // <-- Import CommonModule
+import { TabsModule } from 'ngx-bootstrap/tabs';
 
 @Component({
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, TabsModule],
   styleUrls: ['./add-book.component.css']
 })
 export class AddBookComponent implements OnInit {
