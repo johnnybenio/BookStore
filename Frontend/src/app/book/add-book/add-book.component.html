@@ -1,71 +1,87 @@
-<div class="card col-md-6">
-
-  <div class="card-header">
-    Add New Book
-  </div>
-
-  <div class="card-body">
-    <form (ngSubmit)="onSubmit()" #Form="ngForm" class="container col-md-12">
-      <div>
-        <tabset>
-          <tab heading="Basic Information">Basic content
-            <div class="form-group col-12">
-              <label for="name">
-                Name
-                <span class="text-danger">*</span>
-              </label>
-              <input type="text" class="form-control" #bookName="ngModel" ngModel name="Name" required>
-              <span *ngIf="!bookName.valid && bookName.touched" class="error-block">
-                Please provide the book name
-              </span>
-            </div>
-      
-            <div class="form-group col-12">
-              <label for="price">
-                Price
-                <span class="text-danger">*</span>
-              </label>
-              <input type="text" class="form-control" #bookPrice="ngModel" ngModel name="Price" required>
-              <span *ngIf="!bookPrice.valid && bookPrice.touched" class="error-block">
-                Please provide the book price
-              </span>
-            </div>
-      
-            <div class="form-group col-12">
-              <label for="Type">
-                Type
-              </label>
-              <input type="text" class="form-control" ngModel name="Type">
-            </div>
-      
-            <br>
-      
-            <div class="form-group col-12">
-              <button [disabled]="!Form.valid" type="submit" class="btn btn-primary w-100">Next</button>
-            </div>
-          </tab>
-          <tab heading="Summery">Upload summery
-            <div class="form-group col-12">
-              <button [disabled]="!Form.valid" type="submit" class="btn btn-primary w-100">Next</button>
-            </div>
-          </tab>
-          <tab heading="Other Details">Book details
-            <div class="form-group col-12">
-              <button [disabled]="!Form.valid" type="submit" class="btn btn-primary w-100">Next</button>
-            </div>
-          </tab>
-          <tab heading="Book Photo">Upload photo
-            <div class="form-group col-12">
-              <button [disabled]="!Form.valid" type="submit" class="btn btn-primary me-2">Save</button>
-              <button type="reset" class="btn btn-primary">Cancel</button>
-            </div>
-
-          </tab>
-
-        </tabset>
+<div class="row">
+  <div class="col-8">
+    <div class="card col-md-6">
+      <div class="card-header">
+        <h3>Add New Book</h3>
       </div>
-      
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #Form="ngForm" class="container col-md-12">
+          <div>
+            <tabset #formTabs>
+              <tab heading="Basic Information"> 
+                <div class="form-group col-12">
+                  <label for="name">Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" #bookName="ngModel" ngModel name="Name" required [(ngModel)]="bookView.Name">
+                  <span *ngIf="!bookName.valid && bookName.touched" class="error-block">Please provide the book name</span>
+                </div>
+                <div class="form-group col-12">
+                  <label for="price">Price <span class="text-danger">*</span></label>
+                  <input type="number" class="form-control" #bookPrice="ngModel" ngModel name="Price" required [(ngModel)]="bookView.Price">
+                  <span *ngIf="!bookPrice.valid && bookPrice.touched" class="error-block">Please provide the book price</span>
+                </div>
+                <div class="form-group col-12">
+                  <label for="Type">Type</label>
+                  <input type="text" class="form-control" ngModel name="Type" [(ngModel)]="bookView.Type">
+                </div>
+                <div class="form-group col-12">
+                  <label for="availability">Availability <span class="text-danger">*</span></label>
+                  <select class="form-control" #bookAvailability="ngModel" ngModel name="Availability" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="sale">For Sale</option>
+                    <option value="borrow">For Borrow</option>
+                  </select>
+                  <span *ngIf="!bookAvailability.valid && bookAvailability.touched" class="error-block">Please choose either 'For Sale' or 'For Borrow'</span>
+                </div>
+                <br>
+                <div class="form-group col-12">
+                  <button [disabled]="!Form.valid" type="button" class="btn btn-primary w-100 mb-2" (click)="selectTab(1)">Next</button>
+                </div>
+              </tab>
+              <tab heading="Summary">
+                <div class="form-group col-12 mb-2">
+                  <label for="summary">Summary <span class="text-danger">*</span></label>
+                  <textarea class="form-control" ngModel name="Summary" rows="3"></textarea>
+                </div>
+                <div class="form-group col-12 mb-2">
+                  <button [disabled]="!Form.valid" type="button" class="btn btn-primary w-100 mb-2" (click)="selectTab(2)">Next</button>
+                  <button type="button" class="btn btn-secondary w-100" (click)="selectTab(0)">Back</button>
+                </div>
+              </tab>
+              <tab heading="Other Details">
+                <div class="form-group col-12 mb-2">
+                  <label for="author">Author <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" ngModel name="Author">
+                </div>
+                <div class="form-group col-12">
+                  <button [disabled]="!Form.valid" type="button" class="btn btn-primary w-100 mb-2" (click)="selectTab(3)">Next</button>
+                  <button type="button" class="btn btn-secondary w-100" (click)="selectTab(1)">Back</button>
+                </div>
+              </tab>
+              <tab heading="Book Photo">
+                <div class="form-group col-12">
+                  <label for="photo">Upload Photo</label>
+                  <input type="file" class="form-control mb-2" ngModel name="Photo">
+                </div>
+                <div class="form-group col-12">
+                  <button [disabled]="!Form.valid" type="submit" class="btn btn-primary me-2 w-100 mb-2">Save</button>
+                  <button type="reset" class="btn btn-secondary w-100 mb-2" >Cancel</button>
+                  <button type="button" class="btn btn-secondary w-100" (click)="selectTab(2)">Back</button>
+                </div>
+              </tab>
+            </tabset>
+          </div>
+        </form>
+      </div>
 
-    </form>
+    </div>
   </div>
+  <div class="col-4">
+    <div class="card-header">
+      <h3>Book Preview</h3>
+      <div>
+        <app-book-card [book]="bookView"></app-book-card>
+      </div>
+    </div>
+  </div>
+
 </div>
