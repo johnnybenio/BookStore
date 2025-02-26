@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-img-wrapper">
       <img class="card-img-top" [src]="book.Name + '.jpg'" [alt]="book.Name">
-      <ul class="list-inline text-center member-icons animate">
+      <ul *ngIf="!hideIcons" class="list-inline text-center member-icons animate">
         <li class="list-inline-item">
           <button class="btn btn-primary" routerLink="/book-detail/{{book.Id}}" routerLinkActive="router-link-active" ><i class="fa-solid fa-circle-info"></i></button>
         </li>

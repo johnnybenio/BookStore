@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-8">
-    <div class="card col-md-6">
+    <div class="card col-md-12">
       <div class="card-header">
         <h3>Add New Book</h3>
       </div>
@@ -75,11 +75,11 @@
 
     </div>
   </div>
-  <div class="col-4">
+  <div class="col list-inline text-center member-icons animate">
     <div class="card-header">
       <h3>Book Preview</h3>
       <div>
-        <app-book-card [book]="bookView"></app-book-card>
+        <app-book-card [book]="bookView" [hideIcons]="true"></app-book-card>
       </div>
     </div>
   </div>
